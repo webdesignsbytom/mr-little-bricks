@@ -47,17 +47,28 @@ const HomePage = React.memo(() => {
               <h5>Subscribe Now</h5>
               <h6>Stay up to date and support the channel</h6>
             </article>
-            <section className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pb-4 pt-2'>
+
+            {/* Videos */}
+            <section className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 pb-4 pt-2'>
               {[1, 2, 3, 4].map((video, index) => {
                 return (
-                  <article
+                  <a
                     key={index}
-                    className={`grid aspect-video h-36 shadow-cardShadow ${
-                      video === 3 && 'hidden lg:inline-block'
-                    } ${video === 4 && 'hidden xl:inline-block'}`}
+                    href='https://youtube.com'
+                    rel='noreferrer'
+                    target='_blank'
                   >
-                    Video one
-                  </article>
+                    <article
+                      className={`grid aspect-video cursor-pointer ${
+                        video === 3 && 'hidden lg:grid'
+                      } ${video === 4 && 'hidden xl:grid'}`}
+                    >
+                      <div className='grid grid-rows-rev'>
+                        <div className='shadow-cardShadow'></div>
+                        <div className='text-center'>Race car of Pain</div>
+                      </div>
+                    </article>
+                  </a>
                 );
               })}
             </section>
