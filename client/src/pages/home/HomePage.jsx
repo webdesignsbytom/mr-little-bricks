@@ -35,17 +35,32 @@ const HomePage = React.memo(() => {
           </section>
 
           {/* Youtube videos */}
-          <section className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pb-4 pt-2 general_bg'>
-            {[1, 2, 3, 4].map((video, index) => {
-              return (
-                <article
-                  key={index}
-                  className={`grid aspect-video h-36 shadow-cardShadow ${video === 3 && 'hidden lg:inline-block' } ${video === 4 && 'hidden xl:inline-block' }`}
-                >
-                  Video one
-                </article>
-              );
-            })}
+          <section className='grid grid-cols-reg gap-1 px-2 general_bg'>
+            <article>
+              <h3>Mr Little Bricks</h3>
+              <h4>Watch my builds in action on:</h4>
+
+              <section>
+                <div>Youtube</div>
+                <div>TikTok</div>
+              </section>
+              <h5>Subscribe Now</h5>
+              <h6>Stay up to date and support the channel</h6>
+            </article>
+            <section className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pb-4 pt-2'>
+              {[1, 2, 3, 4].map((video, index) => {
+                return (
+                  <article
+                    key={index}
+                    className={`grid aspect-video h-36 shadow-cardShadow ${
+                      video === 3 && 'hidden lg:inline-block'
+                    } ${video === 4 && 'hidden xl:inline-block'}`}
+                  >
+                    Video one
+                  </article>
+                );
+              })}
+            </section>
           </section>
         </header>
 
