@@ -1,0 +1,17 @@
+.home_header_bg {
+  background: rgb(255, 255, 241);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 241, 1) 0%,
+    rgba(43, 110, 130, 1) 100%
+  );
+}
+
+.general_bg {
+  background: rgb(234, 234, 232);
+  background: linear-gradient(
+    0deg,
+    rgba(234, 234, 232, 1) 0%,
+    rgba(218, 219, 214, 1) 100%
+  );
+}

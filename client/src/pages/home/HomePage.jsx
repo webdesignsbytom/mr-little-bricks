@@ -7,17 +7,11 @@ import { CompanyName } from '../../utils/Constants';
 import Navbar from '../../components/nav/Navbar';
 import { HelmetItem } from '../../components/utils/HelmetItem';
 import FooterComponent from '../../components/footer/FooterComponent';
-import HomePageMainContainer from '../../components/home/HomePageMainContainer';
 // Data
 import {
   homePageAdditionalMeta,
   homePageStructuredData,
 } from '../../utils/data/PageData';
-
-// Lazy-loaded ChatBotComponent
-const ChatBotComponent = lazy(() =>
-  import('../../components/chat/ChatBotComponent')
-);
 
 const HomePage = React.memo(() => {
   usePageTracking(); // Tracks page views
@@ -32,19 +26,31 @@ const HomePage = React.memo(() => {
         additionalMeta={homePageAdditionalMeta}
         structuredData={homePageStructuredData}
       />
-
       {/* Page */}
-      <div className='grid min-h-screen lg:h-screen lg:max-h-screen lg:overflow-hidden bg-main-background font-poppins'>
-        <div className='grid grid-rows-reg'>
-          {/* Navigation */}
-          <Navbar />
+      <div className='grid min-h-screen w-full overflow-x-hidden'>
+        {/* Header */}
+        <header className='grid grid-rows-rev h-screen min-h-screen max-h-screen w-full home_header_bg'>
+          <section className='relative grid bg-bottom w-full h-full bg-home_header_image bg-no-repeat bg-contain'>
+            <Navbar />
+          </section>
 
-          {/* Main page content */}
-          <HomePageMainContainer />
+          {/* Youtube videos */}
+          <section className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pb-4 pt-2 general_bg'>
+            {[1, 2, 3, 4].map((video, index) => {
+              return (
+                <article
+                  key={index}
+                  className={`grid aspect-video h-36 shadow-cardShadow ${video === 3 && 'hidden lg:inline-block' } ${video === 4 && 'hidden xl:inline-block' }`}
+                >
+                  Video one
+                </article>
+              );
+            })}
+          </section>
+        </header>
 
-          {/* Footer */}
-          <FooterComponent />
-        </div>
+        {/* Footer */}
+        <FooterComponent />
       </div>
     </>
   );

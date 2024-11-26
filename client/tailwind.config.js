@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'bg': "url('../assets')",
+        'home_header_image': "url('../assets/images/backgrounds/main-mr-little-bricks-lego-site-background.png')",
       },
       boxShadow: {
         input: 'inset 1px 1px 6px 1px #00000014',
@@ -27,9 +27,17 @@ module.exports = {
         'error-red': '#dc2626',
         'success-green': '#16a34a',
         'hyperlink-blue': '#2563EB',
+        'colour1': '#f1f1f1',
+        'colour2': '#2b6e82',
+        'colour3': '#FFD700',
+        'colour4': '#DA291C',
+
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        lego: ['Lego', 'sans-serif'],
+        legoThick: ['LegoThick', 'sans-serif'],
+
       },
       gridTemplateRows: {
         reg: 'auto 1fr',
