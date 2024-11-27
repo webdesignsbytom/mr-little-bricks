@@ -24,3 +24,29 @@
 .input_shadow {
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25) inset;
 }
+
+.stroke-single,
+.stroke-double {
+  position: relative;
+  background: transparent;
+  z-index: 0;
+  color: white;
+}
+/* add a single stroke */
+.stroke-single:before,
+.stroke-double:before {
+  content: attr(title);
+  position: absolute;
+  -webkit-text-stroke: 0.16em black;
+
+  left: 0;
+  z-index: -1;
+}
+/* add a double stroke */
+.stroke-double:after {
+  content: attr(title);
+  position: absolute;
+  -webkit-text-stroke: 0.25em var(--colour3);
+  left: 0;
+  z-index: -2;
+}

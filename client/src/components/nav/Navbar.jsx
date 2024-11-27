@@ -29,20 +29,20 @@ function Navbar() {
   ];
 
   return (
-    <nav className='absolute top-0 left-1/2 transform -translate-x-1/2 w-max'>
-      <div className='relative grid gap-6 grid-cols-[100px_1fr_auto] bg-gray-600 px-16 rounded-bl-lg rounded-br-lg shadow-cardShadow w-full'>
+    <nav className='absolute top-0 left-1/2 transform -translate-x-1/2 w-full sm:w-max'>
+      <div className='relative grid grid-flow-col justify-between gap-6 sm:grid-cols-[100px_1fr_auto] bg-gray-600 px-4 sm:px-16 rounded-bl-lg rounded-br-lg shadow-cardShadow w-full'>
         {/* Logo */}
         <section className='grid relative w-[100px]'>
           <NavLink
-            className={`grid absolute aspect-square p-4 z-20 bg-colour4 text-colour3 shadow-cardShadow items-center justify-center text-3xl font-lego`}
+            className={`grid absolute aspect-square p-4 z-20 bg-colour4 shadow-cardShadow items-center justify-center text-3xl font-lego`}
             to={HOME_PAGE_URL}
           >
-           Mr.LB
+            <span title="Mr.LB" className='stroke-double font-lego !text-3xl tracking-tighter pr-0.5'>Mr.LB</span>
           </NavLink>
         </section>
 
         {/* Navbar */}
-        <section className='grid items-center'>
+        <section className='hidden sm:grid items-center'>
           <ul className='grid grid-flow-col tracking-wider items-center gap-2 text-colour3 font-lego'>
             {navItems.map(({ path, label }) => (
               <NavItem key={label} url={path} title={label} />
@@ -65,7 +65,7 @@ function Navbar() {
                 className='h-12 w-22 aspect-auto'
               />
             </div>
-            <button className='border-2 border-solid border-colour4 bg-white rounded-lg h-fit py-1 px-4 text-colour4 font-bold font-poppins'>
+            <button className='hidden sm:grid border-2 border-solid border-colour4 bg-white rounded-lg h-fit py-1 px-4 text-colour4 font-bold font-poppins'>
               <span>View Channel</span>
             </button>
           </a>
