@@ -37,13 +37,13 @@ function Navbar() {
             className={`grid absolute aspect-square p-4 z-20 bg-colour4 text-colour3 shadow-cardShadow items-center justify-center text-3xl font-lego`}
             to={HOME_PAGE_URL}
           >
-            LOGO
+           Mr.LB
           </NavLink>
         </section>
 
         {/* Navbar */}
         <section className='grid items-center'>
-          <ul className='grid grid-flow-col items-center gap-2 text-colour3 font-lego'>
+          <ul className='grid grid-flow-col tracking-wider items-center gap-2 text-colour3 font-lego'>
             {navItems.map(({ path, label }) => (
               <NavItem key={label} url={path} title={label} />
             ))}

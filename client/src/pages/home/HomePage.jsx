@@ -35,21 +35,21 @@ const HomePage = React.memo(() => {
           </section>
 
           {/* Youtube videos */}
-          <section className='grid grid-cols-reg gap-1 px-2 general_bg'>
-            <article>
+          <section className='grid grid-cols-reg gap-4 px-2 general_bg'>
+            <article className='grid p-1 text-left'>
               <h3>Mr Little Bricks</h3>
               <h4>Watch my builds in action on:</h4>
 
-              <section>
-                <div>Youtube</div>
-                <div>TikTok</div>
+              <section className='grid grid-cols-2 w-full gap-2'>
+                <button className='grid bg-red-500 items-center text-colour1 rounded-lg'>Youtube</button>
+                <button className='grid bg-purple-500 items-center text-colour1 rounded-lg'>TikTok</button>
               </section>
-              <h5>Subscribe Now</h5>
+              <h5>Subscribe Now!</h5>
               <h6>Stay up to date and support the channel</h6>
             </article>
 
             {/* Videos */}
-            <section className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 pb-4 pt-2'>
+            <section className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1 pb-2 pt-4'>
               {[1, 2, 3, 4].map((video, index) => {
                 return (
                   <a
@@ -63,7 +63,7 @@ const HomePage = React.memo(() => {
                         video === 3 && 'hidden lg:grid'
                       } ${video === 4 && 'hidden xl:grid'}`}
                     >
-                      <div className='grid grid-rows-rev'>
+                      <div className='grid grid-rows-rev gap-1'>
                         <div className='shadow-cardShadow'></div>
                         <div className='text-center'>Race car of Pain</div>
                       </div>
