@@ -49,9 +49,6 @@ module.exports = {
         rev: '1fr auto',
         a1a: 'auto 1fr auto',
       },
-      maxHeight: {
-        '2/3': '66.66vh'
-      },
       screens: {
         xs: '422px',
       },
