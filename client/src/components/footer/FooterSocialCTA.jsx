@@ -3,8 +3,8 @@ import React from 'react';
 import FacebookLogo from '../../assets/images/media_icons/facebook_fb_social_media_black_logo_icon_48px.png';
 import InstagramLogo from '../../assets/images/media_icons/instagram_camera_social_media_netowrking_logo_icon_48px.png';
 import GoogleLogo from '../../assets/images/media_icons/google_brand_branding_logo_network_black_icon_48px.png';
-import GithubLogo from '../../assets/images/media_icons/github_code_octopus_black_logo_icon_48px.png';
 import SocialMediaPin from '../socialMedia/SocialMediaPin';
+import { FACEBOOK_BUSINESS_URL, GOOGLE_BUSINESS_URL, INSTAGRAM_BUSINESS_URL } from '../../utils/Constants';
 // Components
 
 function FooterSocialCTA() {
@@ -16,22 +16,17 @@ function FooterSocialCTA() {
     {
       serviceName: 'Facebook',
       icon: FacebookLogo,
-      url: 'https://www.facebook.com',
+      url: FACEBOOK_BUSINESS_URL,
     },
     {
       serviceName: 'Instagram',
       icon: InstagramLogo,
-      url: 'https://www.instagram.com',
+      url: INSTAGRAM_BUSINESS_URL,
     },
     {
       serviceName: 'Google',
       icon: GoogleLogo,
-      url: 'https://www.google.com',
-    },
-    {
-      serviceName: 'GitHub',
-      icon: GithubLogo,
-      url: 'https://www.github.com',
+      url: GOOGLE_BUSINESS_URL,
     },
   ];
 

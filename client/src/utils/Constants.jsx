@@ -63,3 +63,4 @@ export const LINKEDIN_NAME = 'mrlittlebricks';
 export const FACEBOOK_BUSINESS_URL = `https://www.facebook.com/company/mrlittlebricks`;
 export const INSTAGRAM_BUSINESS_URL = `https://instagram.com/mrlittlebricks`;
 export const LINKEDIN_BUSINESS_URL = `https://www.linkedin.com/mrlittlebricks`;
+export const GOOGLE_BUSINESS_URL = `https://www.google.com/webdesignsbytom`;
