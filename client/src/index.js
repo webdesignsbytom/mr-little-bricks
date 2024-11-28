@@ -9,6 +9,7 @@ import App from './App';
 import UserProvider from './context/UserContext';
 // Styles
 import './styles/index.css';
+import './styles/index.scss';
 import './styles/components.css';
 import './styles/animations.css';
 import './styles/navbar.css';
