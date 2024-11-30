@@ -3,113 +3,97 @@ import React from 'react';
 import YoutubeIcon from '../../assets/images/media_icons/youtube_video_sharing_media_logo_icon_64px.png';
 import LegoManImage from '../../assets/images/lego/personal-lego-person-mr-little-bricks.png';
 import LegoDisplayImage from '../../assets/images/backgrounds/youtube1.png';
-import VideoDisplayContainer from './VideoDisplayContainer';
+import VideoDisplayContainer from '../video/VideoDisplayContainer';
+import ChannelCta from '../general/ChannelCta';
 
 function CheckMeOutComponent({ getNextColor }) {
   return (
     <section className='grid bg-gradient-to-b from-colour4 to-colour1'>
-      <div className='grid container gap-4 lg:gap-12'>
+      <div className='grid gap-4 lg:gap-12'>
         {/* Header */}
-        <section className='mt-4 px-8 py-12 sm:py-16 sm:px-12 lg:px-24 mx-auto'>
-          <div className='grid gap-4 justify-center'>
+        <section className='mt-4 px-8 py-12 sm:py-16 sm:px-12 lg:px-24 lg:py-32 mx-auto'>
+          <div className='grid gap-4 md:gap-8 justify-center'>
             <p
               title='Mr Little Bricks'
-              className='text-3xl lg:text-7xl font-bold mx-auto stroke-double'
+              className='text-3xl sm:text-4xl lg:text-7xl font-bold mx-auto stroke-double'
             >
               Mr Little Bricks
             </p>
-            <p className='text-center text-colour1 font-semibold text-xl'>
+            <p className='text-center text-colour1 font-semibold text-xl md:max-w-[50vw]'>
               Want to see more? Follow me on YouTube, where the builds come to
               life, one brick at a time.
             </p>
-            <a
-              href='https://youtube.com'
-              rel='noreferrer'
-              target='_blank'
-              className='grid grid-flow-col gap-2 items-center w-fit mx-auto'
-            >
-              <div className='grid w-full'>
-                <img
-                  src={YoutubeIcon}
-                  alt='Youtube'
-                  className='h-12 w-22 aspect-auto'
-                />
-              </div>
-              <button className='grid md:hidden lg:grid border-2 border-solid border-colour4 bg-white rounded-lg h-fit py-1 px-4 text-colour4 font-bold font-poppins'>
-                <span>View Channel</span>
-              </button>
-            </a>
+            <div className='relative w-full'>
+              <a
+                href='https://youtube.com'
+                rel='noreferrer'
+                target='_blank'
+                className='absolute inset-x-0 grid grid-flow-col gap-2 items-center w-full mx-auto justify-center rounded-xl shadow-cardShadow bg-white md:max-w-[50vw]'
+              >
+                <div className='grid w-full'>
+                  <img
+                    src={YoutubeIcon}
+                    alt='Youtube'
+                    className='h-12 w-22 aspect-auto'
+                  />
+                </div>
+                <button className='grid border-2 border-solid border-colour4 bg-white rounded-lg h-fit py-1 px-4 text-colour4 font-bold font-poppins'>
+                  <span>View Channel</span>
+                </button>
+              </a>
+            </div>
           </div>
         </section>
 
+                {/* Lego border */}
+                <section className='grid grid-flow-col pb-6'>
+          <div className={`brick b-7x2 mx-auto rotate-[-2deg] b-${getNextColor()}`}></div>
+          <div className={`hidden md:block brick rotate-12 b-4x2 mx-auto b-${getNextColor()}`}></div>
+          <div className={`hidden lg:block rotate-45 brick b-2x2 mx-auto b-${getNextColor()}`}></div>
+          <div className={`brick b-2x2 mx-auto b-${getNextColor()}`}></div>
+          <div className={`rotate-45 brick b-2x2 mx-auto b-${getNextColor()}`}></div>
+          <div className={`hidden md:block brick rotate-12 b-4x2 mx-auto b-${getNextColor()}`}></div>
+          <div className={`hidden lg:block brick b-11x2 rotate-[-10deg] mx-auto b-${getNextColor()}`}></div>
+        </section>
+
         {/* Display sections */}
-        <section className='grid sm:grid-cols-2 gap-8 w-full h-full bg-blue-400'>
-          <section className='max-w-60 lg:max-w-full xl:py-10 mx-auto'>
+        <section className='grid xl:grid-cols-reg gap-8 lg:max-w-[75vw] lg:mx-auto xl:max-w-full w-full h-full px-2 xs:px-4 sm:px-8 xl:max-h-screen xl:overflow-hidden xl:px-16'>
+          <section className='grid max-w-60 lg:max-w-full xl:py-10 mx-auto min-w-[25vw] xl:items-center xl:justify-center'>
             <img
               src={LegoManImage}
               alt='Mr Little Bricks personal lego person'
+              className='max-h-36 xl:max-h-full xl:object-fill'
             />
           </section>
           {/* Video display */}
           <VideoDisplayContainer />
         </section>
-        <section className='grid sm:grid-flow-col'>
-          <section className='grid mt-6'>
-            <section
-              className={`grid mx-auto aspect-square p-4 w-full max-w-32 lg:max-w-[220px] bg-colour4 shadow-cardShadow items-center justify-center text-3xl font-lego mb-6`}
-            >
-              <span
-                title='Mr.LB'
-                className='stroke-double font-lego !text-4xl lg:!text-6xl tracking-tighter pr-0.5'
-              >
-                Mr.LB
-              </span>
-            </section>
-          </section>
-          <section className='grid justify-center mx-auto h-fit items-center my-auto'>
-            <h5
-              title='Subscribe Now!'
-              className='stroke-double font-lego text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tighter mx-auto'
-            >
-              Subscribe Now!
-            </h5>
-            <h6
-              title='Stay up to date and support the channel'
-              className='stroke-double font-lego text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-tighter'
-            >
-              Stay up to date and support the channel
-            </h6>
-            <a
-              href='https://youtube.com'
-              rel='noreferrer'
-              target='_blank'
-              className='grid grid-flow-col gap-2 items-center w-fit mx-auto'
-            >
-              <div className='grid w-full'>
-                <img
-                  src={YoutubeIcon}
-                  alt='Youtube'
-                  className='h-12 w-22 aspect-auto'
-                />
-              </div>
-              <button className='grid md:hidden lg:grid border-2 border-solid border-colour4 bg-white rounded-lg h-fit py-1 px-4 text-colour4 font-bold font-poppins'>
-                <span>View Channel</span>
-              </button>
-            </a>
-          </section>
-        </section>
+
+        {/* Lego border */}
         <section className='grid grid-flow-col mt-6 lg:py-12 xl:py-12'>
-          <div className={`brick b-7x2 mx-auto b-${getNextColor()}`}></div>
-          <div
-            className={`hidden lg:block rotate-45 brick b-2x2 mx-auto b-${getNextColor()}`}
-          ></div>
+          <div className={`brick b-7x2 mx-auto rotate-[-2deg] b-${getNextColor()}`}></div>
+          <div className={`hidden md:block brick rotate-12 b-4x2 mx-auto b-${getNextColor()}`}></div>
+          <div className={`hidden lg:block rotate-45 brick b-2x2 mx-auto b-${getNextColor()}`}></div>
           <div className={`brick b-2x2 mx-auto b-${getNextColor()}`}></div>
-          <div
-            className={`rotate-45 brick b-2x2 mx-auto b-${getNextColor()}`}
-          ></div>
-          <div
-            className={`hidden lg:block brick b-11x2 mx-auto b-${getNextColor()}`}
-          ></div>
+          <div className={`rotate-45 brick b-2x2 mx-auto b-${getNextColor()}`}></div>
+          <div className={`hidden md:block brick rotate-12 b-4x2 mx-auto b-${getNextColor()}`}></div>
+          <div className={`hidden lg:block brick b-11x2 rotate-[-10deg] mx-auto b-${getNextColor()}`}></div>
+        </section>
+
+        {/* Check me out CTA */}
+        <div className='pt-6 lg:pt-10'>
+          <ChannelCta />
+        </div>
+
+        {/* Lego border */}
+        <section className='grid grid-flow-col mt-6 lg:py-12 xl:py-12'>
+          <div className={`brick b-7x2 mx-auto rotate-[-2deg] b-${getNextColor()}`}></div>
+          <div className={`hidden md:block brick rotate-12 b-4x2 mx-auto b-${getNextColor()}`}></div>
+          <div className={`hidden lg:block rotate-45 brick b-2x2 mx-auto b-${getNextColor()}`}></div>
+          <div className={`brick b-2x2 mx-auto b-${getNextColor()}`}></div>
+          <div className={`rotate-45 brick b-2x2 mx-auto b-${getNextColor()}`}></div>
+          <div className={`hidden md:block brick rotate-12 b-4x2 mx-auto b-${getNextColor()}`}></div>
+          <div className={`hidden lg:block brick b-11x2 rotate-[-10deg] mx-auto b-${getNextColor()}`}></div>
         </section>
       </div>
     </section>

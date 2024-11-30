@@ -1,6 +1,7 @@
 import React from 'react';
 import IntroSection from './IntroSection';
 import CheckMeOutComponent from './CheckMeOutComponent';
+import LegoBorder from '../utils/LegoBorder';
 // Components
 
 function HomePageMainContent() {
@@ -14,10 +15,12 @@ function HomePageMainContent() {
   }
 
   return (
-    <main className='grid bg-[#333] h-full w-full'>
+    <main className='grid h-full w-full'>
       <div className='grid'>
         {/* Info section */}
-        <IntroSection getNextColor={getNextColor} />
+        <LegoBorder borderColour='border-green-500' backgroundColour='bg-green-600'>
+          <IntroSection getNextColor={getNextColor} />
+        </LegoBorder>
 
         {/* Check out */}
         <CheckMeOutComponent getNextColor={getNextColor} />

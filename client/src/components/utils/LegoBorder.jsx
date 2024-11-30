@@ -6,7 +6,7 @@ function LegoBorder({ children, borderColour, backgroundColour }) {
 
   return (
     <div
-      className={`grid ${background} p-0.5 rounded-xl`}
+      className={`grid ${background} p-1 shadow-cardShadow`}
       style={{ boxShadow: '0 0 2px black' }}
     >
       <div className={`grid border-8 ${border} border-dotted p-1`}>

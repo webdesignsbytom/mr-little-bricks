@@ -49,6 +49,9 @@ module.exports = {
         rev: '1fr auto',
         a1a: 'auto 1fr auto',
       },
+      lineClamp: {
+        10: '10',
+      },
       screens: {
         xs: '422px',
       },
