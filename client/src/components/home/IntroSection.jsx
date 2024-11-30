@@ -7,7 +7,16 @@ function IntroSection({ getNextColor }) {
     <section className='grid container mx-auto px-8 py-12 sm:py-16 sm:px-12 lg:px-24 mb-10'>
       <article className='grid gap-4'>
         <section className='grid justify-center text-center gap-4 lg:gap-6'>
-          <Logo />
+          <section
+            className={`grid mx-auto aspect-square p-4 lg:p-8 w-fit bg-colour4 shadow-cardShadow items-center justify-center text-3xl font-lego mb-6`}
+          >
+            <span
+              title='Mr.LB'
+              className='stroke-double font-lego !text-4xl lg:!text-6xl tracking-tighter pr-0.5 lg:pr-1'
+            >
+              Mr.LB
+            </span>
+          </section>
           <h4
             title='Mr Little Bricks'
             className='text-3xl lg:text-7xl font-bold mx-auto stroke-double'
@@ -19,7 +28,7 @@ function IntroSection({ getNextColor }) {
           </h5>
         </section>
 
-        <section className='text-[#f1f1f1] grid gap-10 sm:mt-6 text-lg xl:px-10'>
+        <section className='text-[#f1f1f1] grid gap-10 sm:mt-6 text-lg lg:px-10 xl:px-20'>
           <p className='lg:text-center'>
             Mr Little Bricks is a YouTuber, Media Creator, Inventor and
             Brickestrian.
