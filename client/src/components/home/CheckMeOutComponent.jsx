@@ -43,7 +43,7 @@ function CheckMeOutComponent({ getNextColor }) {
         </section>
 
         {/* Display sections */}
-        <section className='grid sm:grid-cols-2 gap-8 w-full h-full px-2'>
+        <section className='grid sm:grid-cols-2 gap-8 w-full h-full bg-blue-400'>
           <section className='max-w-60 lg:max-w-full xl:py-10 mx-auto'>
             <img
               src={LegoManImage}
